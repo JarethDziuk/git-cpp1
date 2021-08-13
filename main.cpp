@@ -21,20 +21,20 @@ int fibonacci(int N) {
     1  2  3  4  5  6   7   8   9
 */
 int primo(int N) {
-     int c = 1,aux = 1;
-    while(c <= N){
-        int n = 0;
-        aux++;
-        for(int i = 0; i < aux;i++){
-            if(aux % i == 0){
-                n++;
-            }
+    int c;
+    int num = 2;
+    int a = 1;
+    int i;
+    while( a <= N)
+    {
+        for(i = 2; num % i != 0; i++);
+        if(i == num){
+            c=num;
+            a++;
         }
-        if(n == 2){
-            c++;
-        }
+        num++;
     }
-        return aux;
+    return c;
 }
 
 /* Determina si un numero es capicua o no.
