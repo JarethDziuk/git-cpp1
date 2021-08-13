@@ -41,8 +41,21 @@ int primo(int N) {
     retorna 0 si no es capicua
     retoran 1 si es capicua
 */
-int capicua(int N) {
-    return 0;
+int capicua(int n) {
+		int a,b=0,c=0;
+	cout<<"Es capicua? 1.-Si 2.-No"<<endl;
+	cin>>n;
+	a=n;
+	while(a!=0)
+	{
+		b=a%10;
+		a=a/10;
+		c=c*10+b;
+	}
+	if(c==n)
+		return 1;
+	else
+		return 0;
 }
 
 
