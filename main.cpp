@@ -1,6 +1,8 @@
 // Example program
 #include <iostream>
 #include <string>
+using namespace std;  
+
 
 
 /* Si es grupo de 3 omitir este
@@ -10,7 +12,17 @@
     1 2 3 4 5 6 7   8 
 */
 int fibonacci(int N) {
-    return 0;
+    int primero=0;//primer numero
+    int segundo=1;//segundo numero
+    int auxiliar;     
+    for(int contador=1;contador<N;++contador){   
+        auxiliar=primero+segundo;
+        cout<<auxiliar<<" ";
+        primero=segundo;
+        segundo=auxiliar;
+    }    
+    
+    return auxiliar;
 }
 
 /* Imprimier en Navo numero primo
@@ -46,7 +58,7 @@ int residuo(int a, int b) {
 int main()
 {
   std::string name;
-  std::cout << "El fibonacci de 8 " << fibonacci(8) << std::endl;   // 21
+  std::cout << "El fibonacci de 8 " << fibonacci(4) << std::endl;   // 21
   std::cout << "El primo numer 8 " << fibonacci(8) << std::endl;    // 19
   std::cout << "El primo numer 8 " << capicua(11211) << std::endl ;    // 1 
   std::cout << "El residuo de  13 entre 4 " << residuo(13, 4) << std::endl;    // 1 
