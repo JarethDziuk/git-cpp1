@@ -49,7 +49,12 @@ int capicua(int N) {
 /* Retornar el residuo de una division sin tulizar el operado residuo (modulo %) ni el operador de division (/)
 */
 int residuo(int a, int b) {
-    return 0;
+    int residuo;
+	while(a>=b){
+		a=a-b;
+	}
+	residuo=a;
+    return residuo;
 }
 
 
