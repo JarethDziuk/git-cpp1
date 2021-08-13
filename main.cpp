@@ -12,7 +12,17 @@
     1 2 3 4 5 6 7   8 
 */
 int fibonacci(int N) {
-    return 0;
+   int primero=0;//primer numero
+    int segundo=1;//segundo numero
+    int auxiliar;     
+    for(int contador=1;contador<N;++contador){   
+        auxiliar=primero+segundo;
+        cout<<auxiliar<<" ";
+        primero=segundo;
+        segundo=auxiliar;
+    }    
+
+    return auxiliar;
 }
 
 /* Imprimier en Navo numero primo
